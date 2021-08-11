@@ -4,4 +4,9 @@
     "vim.leader": ",",
     "vim.highlightedyank.enable": true,
     "vim.useSystemClipboard": true,
+    "css.lint.emptyRules": "ignore",
+    "scss.lint.emptyRules": "ignore",
+    "vim.visualstar": true,
+    "vim.searchHighlightColor": "rgba(250, 240, 170, 0.5)",
+    "vim.hlsearch": true,
 }
