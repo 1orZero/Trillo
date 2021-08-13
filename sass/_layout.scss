@@ -11,7 +11,7 @@
     font-size: 1.4rem;
     height: 7rem;
     background-color: #fff;
-    border-bottom: 1px solid var(--color-grey-light-2);
+    border-bottom: var(--line);
 
     display: flex;
     justify-content: space-between;
@@ -20,9 +20,6 @@
 
 .content {
     display: flex;
-
-    // TEST
-    height: 80rem;
 }
 
 .sidebar {
@@ -41,16 +38,23 @@
 }
 
 .detail {
-    display:flex;
+    display: flex;
+    padding: 4.5rem;
+    border-bottom: var(--line);
+    background-color: var(--color-grey-light-1);
 }
 
 .description {
-    background-color: orangered;
+    font-size: 1.4rem;
+    background-color: #fff;
+    box-shadow: var(--shadow-light);
+    padding: 3rem;
     flex: 0 0 60%;
-    margin-right: 1rem;
+    margin-right: 4.5rem;
 }
 
-.user-reivew {
-    background-color:yellowgreen;
+.user-review {
+    background-color: yellowgreen;
+    box-shadow: var(--shadow-light);
     flex: 1;
 }
