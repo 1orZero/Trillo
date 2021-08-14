@@ -15,6 +15,11 @@
     align-items: center;
     justify-content: center;
 
+    @media only screen and (max-width: $bp-small) {
+        order:1;
+        flex: 0 0 100%;
+    }
+
     &__input {
         font-size: inherit;
         font-family: inherit;
@@ -123,15 +128,28 @@
 // SIDE NAVIGATION
 
 .side-nav {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     list-style-type: none;
     margin-top: 3.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+        margin-top: 0;
+        display: flex;
+        flex-direction: row;
+    }
 
     &__item {
         position: relative;
 
         &:not(:last-child) {
             margin-bottom: 0.5rem;
+            @media only screen and (max-width: $bp-medium) {
+                margin: 0;
+            }
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
         }
     }
 
@@ -171,6 +189,14 @@
 
         position: relative;
         z-index: 10;
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+        }
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            padding: 1rem 0.5rem;
+            align-items: center;
+        }
     }
 
     &__icon {
@@ -178,6 +204,13 @@
         height: 1.75rem;
         margin-right: 2rem;
         fill: currentColor;
+
+        @media only screen and (max-width: $bp-small) {
+            width: 1.5rem;
+            height: 1.5rem;
+            margin-right: 0;
+            margin-bottom: 0.5rem;
+        }
     }
 }
 
@@ -188,6 +221,9 @@
     color: var(--color-grey-light-4);
     text-align: center;
     padding: 2.5rem;
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 }
 
 /////////////////////////////////////
@@ -232,6 +268,10 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         padding: 1.5rem 3rem;
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 1.8rem;
+            padding: 1rem 2rem;
+        }
     }
 
     &__stars {
@@ -256,12 +296,18 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        @media only screen and (max-width: $bp-medium) {
+            padding: 0 2rem;
+        }
     }
 
     &__rating-average {
         text-align: center;
         font-size: 2.25rem;
         margin-bottom: -3px;
+        @media only screen and (max-width: $bp-medium) {
+            font-size: 2rem;
+        }
     }
 
     &__rating-count {
@@ -370,6 +416,7 @@
         margin-right: auto;
     }
     &__friends {
+        display: flex;
     }
     &__photo {
         height: 4rem;
@@ -379,7 +426,7 @@
         box-sizing: content-box;
 
         &:not(:last-of-type) {
-            margin-right: -1.5rem;
+            margin-right: -2.1rem;
         }
     }
 }
@@ -397,6 +444,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2rem;
+        margin-bottom: 3rem;
+    }
 
     &__text {
         z-index: 2;
@@ -453,6 +505,11 @@
 .cta {
     padding: 3.5rem 0;
     text-align: center;
+
+    @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 0;
+    }
+
     &__book-now {
         font-size: 1.5rem;
         font-weight: 300;
